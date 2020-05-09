@@ -99,7 +99,8 @@ function notAuthorized() {
 
     toggleModalAuth();
     buttonAuth.removeEventListener("click", toggleModalAuth);
-    buttonCloseAuth.removeEventListener("click", toggleModalAuth); cardsRestaurants.removeEventListener("click", toggleModalAuth);
+    buttonCloseAuth.removeEventListener("click", toggleModalAuth);
+    cardsRestaurants.removeEventListener("click", toggleModalAuth);
     logInForm.removeEventListener("submit", logIn);
     logInForm.reset();
     checkAuth();
@@ -130,7 +131,7 @@ function createCardRestaraunt(restaurant) {
   card.products = products;
   card.info = [name, stars, price, kitchen];
 
-  card.insertAdjacentHTML("beforeend", `    
+  card.insertAdjacentHTML("beforeend", `
     <img src="${image}" alt="image" class="card-image"/>
     <div class="card-text">
       <div class="card-heading">
